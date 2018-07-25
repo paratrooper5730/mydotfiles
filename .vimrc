@@ -26,8 +26,10 @@ Plugin 'L9'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
-Plugin 'shawncplus/phpcomplete.vim'
+"Plugin 'shawncplus/phpcomplete.vim'
+"Plugin 'lifepillar/vim-mucomplete'
 "Plugin 'vim-scripts/phpfolding.vim'
+"
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'sjl/gundo.vim'
@@ -55,6 +57,8 @@ filetype plugin indent on    " required
 "
 "
 "
+"
+
 let g:syntastic_python_checkers = ["python","pylint"]
 filetype plugin on    " required
 syntax enable
@@ -62,7 +66,6 @@ set tabstop=4
 set tabpagemax=50
 set shiftwidth=4
 set expandtab "even if i press the tab button, still use 4 spaces instead
-set smarttab
 set wrap
 set linebreak
 set number
