@@ -14,32 +14,29 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 "Plugin 'shawncplus/phpcomplete.vim'
 "Plugin 'lifepillar/vim-mucomplete'
 "Plugin 'vim-scripts/phpfolding.vim'
 "
+Plugin 'L9'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'sjl/gundo.vim'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'jistr/vim-nerdtree-tabs'
-"Plugin 'scrooloose/syntastic' 
 Plugin 'w0rp/ale' 
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'sjl/badwolf'
-"Plugin 'yodiaditya/vim-pydjango'
+Plugin 'alvan/vim-closetag'
+Plugin 'NikolayFrantsev/jshint2.vim'
+"
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,8 +55,6 @@ filetype plugin indent on    " required
 "
 "
 "
-
-let g:syntastic_python_checkers = ["python","pylint"]
 filetype plugin on    " required
 syntax enable
 set tabstop=4
@@ -166,6 +161,7 @@ let php_noShortTags = 1
 let php_baselib = 1
 
 au! BufNewFile,BufRead *.tpl set filetype=php
+au! BufNewFile,BufRead *.cmst set filetype=php
 
 
 " Russian language keyboard mappings (UTF-8)
@@ -237,7 +233,7 @@ map Б <
 map Ю >
 " End of the mapping
 
-colorscheme badwolf
+colorscheme desert
 hi clear CursorLine
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
