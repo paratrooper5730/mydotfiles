@@ -39,13 +39,13 @@ bindkey "^k" next  # change window with ctrl-right
 #chdir /var/www/html/vgl2
 #screen -t valgalla 
 #stuff "git pull origin master\012"
-chdir /home/nik/nika/nikacrm
-screen -t nika 
-stuff "ls -l .\012"
-
-chdir /home/nik/nika
-screen -t SY 
-stuff "php bin/console server:run"
+#chdir /home/nik/nika/nikacrm
+#screen -t nika 
+#stuff "ls -l .\012"
+#
+#chdir /home/nik/nika
+#screen -t SY 
+#stuff "php bin/console server:run"
 
 #chdir /home/par/rally
 #screen -t rally_reg 
@@ -55,13 +55,13 @@ stuff "php bin/console server:run"
 #screen -t garage 
 #stuff "ls -l .\012"
 
-chdir /home/nik/SimpleIMAPClassifier
-screen -t IMAP 
-stuff "ls -l .\012"
-#stuff "git pull origin master; vim . \012"
-#chdir /var/www/html/water
-#screen -t water 
-#stuff "git pull origin master; vim . \012"
+#chdir /home/nik/SimpleIMAPClassifier
+#screen -t IMAP 
+#stuff "ls -l .\012"
+##stuff "git pull origin master; vim . \012"
+##chdir /var/www/html/water
+##screen -t water 
+##stuff "git pull origin master; vim . \012"
 #chdir /home/par/gtd
 #screen -t GTD  
 #stuff "vim .\012"
@@ -75,17 +75,17 @@ stuff "ls -l .\012"
 #stuff "source activate webui \012"
 #chdir /home/par/sleep
 #screen -t sleep
+#chdir /home/nik
+#screen -t SOCKS5
+#stuff "./piper.sh   \012"
+#
+#chdir /home/nik/rally_reg
+#screen -t rally
+#stuff "ls -l .\012"
+
 chdir /home/nik
-screen -t SOCKS5
-stuff "./piper.sh   \012"
 
-chdir /home/nik/rally_reg
-screen -t rally
-stuff "ls -l .\012"
-
-chdir /home/nik
-
-shelltitle "$ |xonsh"
+shelltitle "$ |bash"
 
 # THIS IS THE PRETTY BIT
 #change the hardstatus settings to give an window list at the bottom of the                                                                        

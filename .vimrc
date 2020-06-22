@@ -32,10 +32,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'sjl/gundo.vim'
-Plugin 'w0rp/ale' 
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'alvan/vim-closetag'
-Plugin 'NikolayFrantsev/jshint2.vim'
+Plugin 'amadeus/vim-mjml'
+Plugin 'mechatroner/rainbow_csv'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -107,32 +107,28 @@ nmap пЕ gT
 nmap Q <Nop>
 
 
-:au FocusLost * :set norelativenumber
-:au FocusGained * :set relativenumber
-
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertLeave * :set relativenumber
-
+":au FocusLost * :set norelativenumber
+":au FocusGained * :set relativenumber
+"
+"autocmd InsertEnter * :set norelativenumber
+"autocmd InsertLeave * :set relativenumber
+"
+"
 function! NumberToggle()
-  if(&relativenumber == 1)
+  if(&number == 1)
     set norelativenumber
-    set number
+    set nonumber
   else 
-      if(&number == 1)
-        set nonu
-      else 
-        set relativenumber
-      endif
+    set number
+    set relativenumber
   endif
 endfunc
 
+
+nnoremap <C-N> :call NumberToggle()<cr>
+
+set number
 set relativenumber
-
-nnoremap <C-N><C-N> :call NumberToggle()<cr>
-
-" toggle undo plugin
-nnoremap <F5> :GundoToggle<CR>
-
 
 "nmap <C-N><C-N> :set invnumber<CR>
 "nmap <C-J> i <Enter> <Esc>
@@ -162,6 +158,7 @@ let php_baselib = 1
 
 au! BufNewFile,BufRead *.tpl set filetype=php
 au! BufNewFile,BufRead *.cmst set filetype=php
+au! BufNewFile,BufRead *.mjml set filetype=xml
 
 
 " Russian language keyboard mappings (UTF-8)
