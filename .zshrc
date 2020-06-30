@@ -96,3 +96,4 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 source ~/.bin/tmuxinator.zsh
+

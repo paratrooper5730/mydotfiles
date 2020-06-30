@@ -26,17 +26,3 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-
-
-SESSIONNAME="lopata"
-tmux new-session -A -s $SESSIONNAME
-#tmux rename-window OpenVPN@Six
-tmux send-keys -t $SESSIONNAME "sudo openvpn ~/Downloads/client.ovpn" C-m 
-#tmux new-window
-#tmux send-keys -t $SESSIONNAME "ssh root@tortuga.niksem.me" C-m 
-## ssh to calypso
-#tmux new-window
-#tmux send-keys -t $SESSIONNAME "ssh -p 8022 six@194.95.254.12" C-m 
-## ssh to six demo
-#tmux new-window
-#tmux send-keys -t $SESSIONNAME "ssh six@94.186.150.217" C-m 
