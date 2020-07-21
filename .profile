@@ -26,3 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+
+#add symfony binary to path
+  export PATH="$HOME/.symfony/bin:$PATH"
+
