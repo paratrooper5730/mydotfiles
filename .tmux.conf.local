@@ -300,3 +300,6 @@ tmux_conf_copy_to_os_clipboard=false
 #changes by Nik
 bind -n C-j previous-window
 bind -n C-k next-window
+
+new -n nadmozg
+neww -n piper
