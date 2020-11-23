@@ -36,6 +36,9 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'alvan/vim-closetag'
 Plugin 'amadeus/vim-mjml'
 Plugin 'mechatroner/rainbow_csv'
+Plugin 'rbtnn/vim-game_engine'
+Plugin 'rbtnn/vim-mario'
+
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -235,3 +238,10 @@ hi clear CursorLine
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
 set ma
+
+" Uncomment the following to have Vim jump to the last position when                                                       
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
