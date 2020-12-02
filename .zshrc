@@ -95,5 +95,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-source ~/.bin/tmuxinator.zsh
+#source ~/.bin/tmuxinator.zsh
 
+# tm fom tmux
+alias tm="~/mydotfiles/tm.sh"

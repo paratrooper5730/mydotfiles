@@ -301,5 +301,10 @@ tmux_conf_copy_to_os_clipboard=false
 bind -n C-j previous-window
 bind -n C-k next-window
 
-new -n nadmozg
-neww -n piper
+#run-shell ~/mydotfiles/tmux-continuum/continuum.tmux
+#
+#~/mydotfiles/tmuxinit.sh
+new-window -n "~/.tmux.conf.local"
+new -n Git
+neww -n Server
+neww -n Misc

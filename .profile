@@ -30,3 +30,4 @@ fi
 #add symfony binary to path
   export PATH="$HOME/.symfony/bin:$PATH"
 
+
