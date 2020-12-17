@@ -31,3 +31,4 @@ fi
   export PATH="$HOME/.symfony/bin:$PATH"
 
 
+alias joplin="/home/nik/.joplin/Joplin.AppImage"
