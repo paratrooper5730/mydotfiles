@@ -14,7 +14,12 @@ if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"
     fi
+else
+    setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,ru
+    tilda -h &
 fi
+
+
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
