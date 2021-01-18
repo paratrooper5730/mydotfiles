@@ -14,6 +14,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 else
     setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,ru
+    tilda -h &
 fi
 
 
@@ -35,4 +36,3 @@ fi
 alias joplin="/home/nik/.joplin/Joplin.AppImage"
 alias ll="ls -lh"
 
-#end
